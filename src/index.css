@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* 🌸 THEME */
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg-dark: #fdf2f8;
+  --color-card-dark: #ffffff;
+  --color-primary: #a78bfa;
+  --color-secondary: #f472b6;
+  --color-text-main: #374151;
+  --color-text-muted: #9ca3af;
+}
+
+/* BASE */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-bg-dark text-text-main antialiased;
+  }
+}
+
+/* UTILITIES */
+@layer utilities {
+
+  /* 💅 PREMIUM CARD */
+  .glass-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #fbcfe8;
+    box-shadow: 
+      0 10px 25px rgba(244, 114, 182, 0.15),
+      0 5px 10px rgba(167, 139, 250, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(244, 114, 182, 0.25),
+      0 10px 20px rgba(167, 139, 250, 0.2);
+  }
+
+  /* 🌸 BACKGROUND */
+  .soft-bg {
+    background: linear-gradient(135deg, #fdf2f8, #faf5ff, #fce7f3);
+  }
+
+  /* 💖 BUTTON */
+  .pink-btn {
+    background: linear-gradient(to right, #a78bfa, #f472b6);
+    color: white;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .pink-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  /* 🌸 PILLS */
+  .glass-pill {
+    background: linear-gradient(to right, #fdf2f8, #faf5ff);
+    border: 1px solid #f9a8d4;
+    color: #7c3aed;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  /* 🌈 TEXT */
+  .gradient-text {
+    background: linear-gradient(to right, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-24;
+  }
+}
