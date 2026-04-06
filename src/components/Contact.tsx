@@ -3,16 +3,16 @@ import { Send } from 'lucide-react';
 
 export default function Contact() {
 
-  // ✅ WhatsApp Function
-  const handleWhatsApp = (e) => {
+  // ✅ WhatsApp Function (TYPE FIXED ONLY)
+  const handleWhatsApp = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = e.target;
+    const form = e.currentTarget;
 
-    const name = form.name.value;
-    const email = form.email.value;
-    const subject = form.subject.value;
-    const message = form.message.value;
+    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
 
     const phoneNumber = "919975451306"; // 👉 apna number yaha daalo
 
