@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import pratu from '../assets/pratu.jpeg';
 import { Github, Linkedin, Instagram, Phone, Download, Target, Zap, Heart, Sparkles } from 'lucide-react';
 
 export default function About() {
@@ -18,7 +19,6 @@ export default function About() {
       {/* HEADING */}
       <div className="flex flex-col items-center text-center mb-10 md:mb-12">
         <span className="glass-pill mb-3">My Identity</span>
-
         <h2 className="text-3xl md:text-5xl font-extrabold gradient-text">
           About Me
         </h2>
@@ -26,7 +26,7 @@ export default function About() {
 
       <div className="grid lg:grid-cols-12 gap-6 md:gap-8 items-stretch">
 
-        {/* LEFT PROFILE CARD */}
+        {/* LEFT CARD */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,10 +34,7 @@ export default function About() {
         >
           {/* IMAGE */}
           <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md">
-            <img 
-              src="\Pratu.jpeg"
-              className="w-full h-full object-cover"
-            />
+            <img src={pratu} className="w-full h-full object-cover" alt="profile" />
           </div>
 
           <h1 className="text-lg md:text-xl font-bold text-gray-800">
@@ -50,7 +47,7 @@ export default function About() {
 
           {/* TAGS */}
           <div className="flex flex-wrap justify-center gap-2">
-            {['MERN Stack', 'Frontend Developer', 'UI/UX Design', 'HTML/CSS', 'React.js', 'Node.js'].map(tag => (
+            {['MERN Stack', 'Frontend Developer', 'UI/UX Design', 'HTML/CSS', 'React.js', 'Node.js'].map((tag) => (
               <span key={tag} className="glass-pill">
                 {tag}
               </span>
@@ -68,7 +65,7 @@ export default function About() {
             </a>
 
             <a 
-              href="\PRATIKSHA DALAL (1).pdf"
+             href="/portfolio-website/pratiksharesume.pdf"
               download
               className="px-4 py-2 rounded-full border border-pink-200 text-gray-700 hover:bg-pink-50 transition flex items-center gap-2"
             >
@@ -77,7 +74,7 @@ export default function About() {
 
           </div>
 
-          {/* ✅ SOCIAL (UPDATED WITH LINKS) */}
+          {/* SOCIAL */}
           <div className="flex gap-3 mt-2">
             {[
               {
@@ -125,17 +122,17 @@ export default function About() {
             </p>
 
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-              I am a passionate Web Developer with a strong foundation in front-end and full-stack web development. I have experience working with technologies such as HTML, CSS, JavaScript, React.js, and SQL databases to build responsive, user-friendly web applications.
+              I am a passionate Web Developer with a strong foundation in front-end and full-stack web development.
             </p>
           </motion.div>
 
+          {/* HIGHLIGHTS */}
           <div className="grid sm:grid-cols-2 gap-3 md:gap-4">
             {highlights.map((item, i) => (
               <div 
-                key={i} 
+                key={i}
                 className="bg-white rounded-xl shadow-sm p-4 md:p-5 flex flex-col gap-2 border border-pink-100 hover:shadow-md transition"
               >
-
                 <div className="bg-gradient-to-r from-purple-400 to-pink-400 p-2 rounded-lg w-fit text-white">
                   {item.icon}
                 </div>
@@ -147,7 +144,6 @@ export default function About() {
                 <p className="text-xs text-gray-500">
                   {item.desc}
                 </p>
-
               </div>
             ))}
           </div>

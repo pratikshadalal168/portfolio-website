@@ -14,7 +14,7 @@ export default function Contact() {
     const subject = form.subject.value;
     const message = form.message.value;
 
-    const phoneNumber = "91XXXXXXXXXX"; // 👉 apna number yaha daalo
+    const phoneNumber = "919975451306"; // 👉 apna number yaha daalo
 
     const text = `Hello Pratiksha,
 
@@ -26,7 +26,7 @@ Message: ${message}`;
     const encodedText = encodeURIComponent(text);
     const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
 
-    window.open(url, "_blank");
+    window.location.href = url;
   };
 
   return (
