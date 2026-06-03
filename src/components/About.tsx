@@ -65,7 +65,7 @@ export default function About() {
             </a>
 
             <a 
-             href="/portfolio-website/pratiksharesume.pdf"
+             href="/portfolio-website/pratiksha resume.pdf"
               download
               className="px-4 py-2 rounded-full border border-pink-200 text-gray-700 hover:bg-pink-50 transition flex items-center gap-2"
             >
@@ -118,11 +118,11 @@ export default function About() {
             </h3>
 
             <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-2">
-              I'm a developer who believes that great software is built at the intersection of engineering and design.
+              I’m a MERN Stack Developer passionate about building responsive, scalable, and user-centric web applications. I specialize in React.js, Node.js, Express.js, MongoDB, and modern frontend technologies to create seamless digital experiences.
             </p>
 
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-              I am a passionate Web Developer with a strong foundation in front-end and full-stack web development.
+              With hands-on experience in full-stack development, API integration, authentication systems, and deployment, I enjoy transforming ideas into efficient and impactful solutions while continuously learning and improving my craft.
             </p>
           </motion.div>
 
