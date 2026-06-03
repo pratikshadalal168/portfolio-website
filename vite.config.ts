@@ -9,8 +9,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss()],
 
-    // ✅ IMPORTANT (GitHub repo name)
-    base: '/portfolio-website/',
+    base: '/',
 
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
@@ -18,7 +17,7 @@ export default defineConfig(({ mode }) => {
 
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'), // 🔥 FIXED (pehle '.' tha)
+        '@': path.resolve(__dirname, './src'),
       },
     },
 
