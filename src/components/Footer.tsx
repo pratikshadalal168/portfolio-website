@@ -83,12 +83,6 @@ export default function Footer() {
 
           <p>© 2026 Pratiksha Dalal. All rights reserved.</p>
 
-          <p>
-            Built with{" "}
-            <span className="text-pink-400">React</span> &{" "}
-            <span className="text-purple-400">Tailwind</span>
-          </p>
-
         </div>
 
       </div>
